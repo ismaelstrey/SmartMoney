@@ -4,7 +4,7 @@ import EntryLabel from '../../components/BalanceLabel';
 import EntrySummary from '../../components/EntrySummary';
 import EntryList from '../../components/EntryList';
 
-const Report = () => {
+const Report = ({navigation}) => {
   return (
     <View style={styles.container}>
       <EntryLabel />
@@ -20,7 +20,7 @@ const Report = () => {
       <EntryList />
       <View>
         <Button title="Salvar" />
-        <Button title="Fechar" />
+        <Button title="Fechar" onPress={() => navigation.goBack()} />
       </View>
     </View>
   );

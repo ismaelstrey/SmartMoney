@@ -8,10 +8,10 @@ const EntrySchema = {
     entryAt: 'date',
     latitude: 'float?',
     longitude: 'float?',
-    adress: 'string',
-    photo: 'string',
+    address: 'string?',
+    photo: 'string?',
     isInit: 'bool',
-    category: 'Category',
+    category: 'Category?',
   },
 };
 

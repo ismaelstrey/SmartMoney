@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Button} from 'react-native';
 import BalancePanel from '../../components/BalancePanel';
 import EntrySummary from '../../components/EntrySummary';
 import EntryList from '../../components/EntryList';
-const Main = () => {
+const Main = ({navigation}) => {
   const entriesList = [
     {key: '1', description: 'Aluguel', amount: 10},
     {key: '2', description: 'Lazer', amount: 190},
@@ -21,6 +21,10 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <BalancePanel currentBalance={currentBalance} />
+      <Button
+        title="Adicionar"
+        onPress={() => navigation.navigate('NewEntry')}
+      />
       <EntrySummary entries={entriesSummary} />
       <EntryList entries={entriesList} />
     </View>
